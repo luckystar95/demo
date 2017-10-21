@@ -1,0 +1,75 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+#container {
+	position: relative;	
+	margin:0 auto;
+	margin-top: 50px;
+	height: 600px;
+	width: 1000px;
+	overflow: hidden;
+	border-radius: 60%;
+}
+#list {
+	height: 600px;
+	width: 1000px;
+	position: absolute;
+}
+#list img{
+	position: absolute;
+	float: left;
+	/*display: none;*/
+	opacity: 0;
+	transition: opacity 1s;
+}
+#list img.active{
+	/*display: block;*/
+	opacity: 1;
+}
+#point {
+	position: absolute;
+	width: 200px;
+	height: 30px;
+	z-index: 2;
+	bottom: 10px;
+	left: 413px;
+}
+#point span {
+	float: left;
+	width: 22px;
+	height: 22px;
+	margin-right: 5px;
+	border: 1px darkgray solid;
+	border-radius: 50%;
+	background: burlywood;
+	cursor:pointer;
+}
+#point span.active {
+	background-color: #5E5E5E;
+}
+#prev,#next {
+	position: absolute;
+	width: 16px;
+	height: 30px;
+	top: 320px;
+	background-image: url(../img/arrow.png);
+	display: none;
+}
+#container:hover .arrow {
+	display: block;
+}
+.arrow:hover {
+	background-color: #5e5e5e;
+	opacity: .8;
+}
+#next {
+	right: 15px;	
+}
+#prev {
+	left: 15px;
+	transform: rotate(180deg);
+}
+/*#list:first-child {
+	opacity:0;
+}*/
